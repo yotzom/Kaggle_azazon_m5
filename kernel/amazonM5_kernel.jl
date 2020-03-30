@@ -25,7 +25,7 @@ function loadMultiData(filepath, filename, sort = true)
     return data
 end # function
 
-#Todo
+#Finished
 #search string in array
 """
     searchArray(array, pattern)
@@ -33,12 +33,12 @@ end # function
 documentation
 """
 function searchArray(array, pattern)
-    pattern = (string("r", '"', pattern, '"')
-    println(pattern)
-    println(typeof(r"pattern"))
+    pattern = Regex(pattern)
     tmp = Vector()
     for i in array
-        append!(tmp, occursin(pattern, i))
+        if occursin(pattern, i)
+            push!(tmp, i)
+        end # if
     end # for
     return tmp
 end # function
