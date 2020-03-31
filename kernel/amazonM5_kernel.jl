@@ -1,7 +1,8 @@
 #homedir()
 #pwd()
 #Set work directory
-cd("C:\\Users\\CCYoTzom\\Desktop\\kaggle_azazon_m5\\kernel")
+#cd("C:\\Users\\CCYoTzom\\Desktop\\kaggle_azazon_m5\\kernel")
+cd("D:\\Jace\\Project\\98.Learning\\Kaggle_azazon_m5\\kernel")
 
 using CSV
 using DataFrames
