@@ -49,3 +49,14 @@ calendar=CSV.read("../data/calendar.csv")
 sales_train_validation=CSV.read("../data/sales_train_validation.csv")
 sample_submission=CSV.read("../data/sample_submission.csv")
 sell_prices=CSV.read("../data/sell_prices.csv")
+
+#Todo: data preproceesing
+#Todo: EDA
+#Todo: machine learning
+#Todo: predict
+#Todo: cross validation
+#Todo: Artificial Neural Network
+#Todo: training and tuning model
+#Todo: export data
+#Todo: dashboard
+#Todo: API
