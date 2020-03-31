@@ -19,7 +19,7 @@ function loadMultiData(filepath, filename, sort = true)
     filelist = readdir(filepath, sort = sort)
     data = DataFrame()
     for i in filelist
-        global data = [data; CSV.read(string(filepath, i))]
+        data = [data; CSV.read(string(filepath, i))]
         println(string("load data : ", i, " success."))
     end
     println("load data finished.")
