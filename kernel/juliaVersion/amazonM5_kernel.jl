@@ -1,8 +1,12 @@
 #homedir()
 #pwd()
+
 #Set work directory
-cd("C:\\Users\\CCYoTzom\\Desktop\\kaggle_azazon_m5\\kernel")
-#cd("D:\\Jace\\Project\\98.Learning\\Kaggle_azazon_m5\\kernel")
+if isequal(pwd(), "C:\\Users\\CcYoTzom")
+    cd("D:\\Jace\\Project\\98.Learning\\Kaggle_azazon_m5\\kernel")
+else
+    cd("C:\\Users\\CCYoTzom\\Desktop\\kaggle_azazon_m5\\kernel")
+end # if
 
 using CSV
 using DataFrames
@@ -56,7 +60,8 @@ sell_prices=CSV.read("../data/sell_prices.csv")
 
 #known data
 """
-goal: Estimate the unit sales of Walmart retail goods.
+Goal: Estimate the unit sales of Walmart retail goods.
+
 calendar.csv - Contains information about the dates on which the products are sold.
 sales_train_validation.csv - Contains the historical daily unit sales data per product and store [d_1 - d_1913]
 sample_submission.csv - The correct format for submissions. Reference the Evaluation tab for more info.
