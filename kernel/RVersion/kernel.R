@@ -26,10 +26,10 @@ loadMultiData <- function(filepath, filepattern){
 }
 
 #read data
-calendar=CSV.read("../data/calendar.csv")
-sales_train_validation=CSV.read("../data/sales_train_validation.csv")
-sample_submission=CSV.read("../data/sample_submission.csv")
-sell_prices=CSV.read("../data/sell_prices.csv")
+calendar <- read.csv("../../data/calendar.csv", sep = ",", stringsAsFactors = F)
+sales_train_validation <- read.csv("../../data/sales_train_validation.csv", sep = ",", stringsAsFactors = F)
+sample_submission <- read.csv("../../data/sample_submission.csv", sep = ",", stringsAsFactors = F)
+sell_prices <- read.csv("../../data/sell_prices.csv", sep = ",", stringsAsFactors = F)
 
 #known data
 
@@ -42,7 +42,7 @@ sell_prices=CSV.read("../data/sell_prices.csv")
 # sales_train_evaluation.csv - Available once month before competition deadline. Will include sales [d_1 - d_1941]
 
 
-println("rows length: ", size(df, 1), ", columns length: ", size(df, 2))
+cat("rows length: ", nrow(sales_train_validation), ", columns length: ", ncol(sales_train_validation))
 
 #Todo: EDA
 
