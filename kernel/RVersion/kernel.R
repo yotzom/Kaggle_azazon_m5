@@ -7,6 +7,8 @@ if(grepl("Jace", getwd())){
 
 #library
 library(stringr)
+#library(tidyverse)
+library(vroom) # use vroom() load csv
 
 #combine multi part data
 #Status : Finished
@@ -25,11 +27,11 @@ loadMultiData <- function(filepath, filepattern){
     }
 }
 
-#read data
-calendar <- read.csv("../../data/calendar.csv", sep = ",", stringsAsFactors = F)
-sales_train_validation <- read.csv("../../data/sales_train_validation.csv", sep = ",", stringsAsFactors = F)
-sample_submission <- read.csv("../../data/sample_submission.csv", sep = ",", stringsAsFactors = F)
-sell_prices <- read.csv("../../data/sell_prices.csv", sep = ",", stringsAsFactors = F)
+#load data
+calendar <- data.frame(vroom("../../data/calendar.csv"))
+sales_train_validation <- data.frame(vroom("../../data/sales_train_validation.csv"))
+#sample_submission <- data.frame(vroom("../../data/sample_submission.csv"))
+sell_prices <- data.frame(vroom("../../data/sell_prices.csv"))
 
 #known data
 
