@@ -49,10 +49,11 @@ cat("rows length: ", nrow(sales_train_validation), ", columns length: ", ncol(sa
 
 #Todo: EDA
 
-#Todo: data preproccesing
-#Todo: machine learning
-#Todo: predict
-#Todo: cross validation
+#Todo: Feature engineering
+#Todo: Data preproccesing
+#Todo: Machine learning
+#Todo: Predict
+#Todo: Cross validation
 #Todo: Artificial Neural Network
 #Todo: training and tuning model
 #Todo: export data
