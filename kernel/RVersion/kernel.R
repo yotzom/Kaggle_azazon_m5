@@ -52,15 +52,22 @@ sell_prices <- data.frame(vroom("../../data/sell_prices.csv"))
 
 cat("rows length: ", nrow(sales_train_validation), ", columns length: ", ncol(sales_train_validation))
 
-#Todo: EDA
+#direction:
+#1.計算出節日前後影響消費區間 : 依日期groupby每日總賣出的產品數量，畫出曲線看是否可以訂出影響消費的區間
 
-#Todo: Feature engineering
-#Todo: Data preproccesing
-#Todo: Machine learning
-#Todo: Predict
-#Todo: Cross validation
-#Todo: Artificial Neural Network
-#Todo: training and tuning model
-#Todo: export data
-#Todo: dashboard
-#Todo: API
+
+###Todo: Data preproccesing
+
+#combine data
+full_df <- merge(x = , y = df2, by = "CustomerId", all = TRUE)
+
+###Todo: EDA
+###Todo: Feature engineering
+###Todo: Machine learning
+###Todo: Predict
+###Todo: Cross validation
+###Todo: Artificial Neural Network
+###Todo: training and tuning model
+###Todo: export data
+###Todo: dashboard
+###Todo: API
