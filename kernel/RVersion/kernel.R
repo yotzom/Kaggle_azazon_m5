@@ -36,11 +36,14 @@ sell_prices <- read.csv("../../data/sell_prices.csv", sep = ",", stringsAsFactor
 # Goal: Estimate the unit sales of Walmart retail goods.
 # 
 # calendar.csv - Contains information about the dates on which the products are sold.
-# sales_train_validation.csv - Contains the historical daily unit sales data per product and store [d_1 - d_1913]
-# sample_submission.csv - The correct format for submissions. Reference the Evaluation tab for more info.
+#   - wm_yr_wk : 每星期唯一的ID(每年共52周從1/29日起)
+#   - snap_(CA.TX.WI) : 是否開放補充營養援助計劃的人購買
 # sell_prices.csv - Contains information about the price of the products sold per store and date.
+#   - sell_price : 單個商品每周每間店的售價
+# sample_submission.csv - The correct format for submissions. Reference the Evaluation tab for more info.
+# sales_train_validation.csv - Contains the historical daily unit sales data per product and store [d_1 - d_1913]
 # sales_train_evaluation.csv - Available once month before competition deadline. Will include sales [d_1 - d_1941]
-
+#   - 每個商品在每間店的銷售數量
 
 cat("rows length: ", nrow(sales_train_validation), ", columns length: ", ncol(sales_train_validation))
 
