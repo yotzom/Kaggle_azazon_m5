@@ -34,16 +34,19 @@ sales_train_validation <- data.frame(vroom("../../data/sales_train_validation.cs
 sell_prices <- data.frame(vroom("../../data/sell_prices.csv"))
 
 #known data
-
 # Goal: Estimate the unit sales of Walmart retail goods.
 # 
 # calendar.csv - Contains information about the dates on which the products are sold.
 #   - wm_yr_wk : 每星期唯一的ID(每年共52周從1/29日起)
 #   - snap_(CA.TX.WI) : 是否開放補充營養援助計劃的人購買
+#   - all column names : date、wm_yr_wk、weekday、wday、month、year、d、event_name_1
+#                       event_type_1、event_name_2、event_type_2、snap_CA、snap_TX、snap_WI
 # sell_prices.csv - Contains information about the price of the products sold per store and date.
 #   - sell_price : 單個商品每周每間店的售價
+#   - all column names : store_id、item_id、wm_yr_wk、sell_price
 # sample_submission.csv - The correct format for submissions. Reference the Evaluation tab for more info.
 # sales_train_validation.csv - Contains the historical daily unit sales data per product and store [d_1 - d_1913]
+#   - all column names : id、item_id、dept_id、cat_id、store_id、state_id、d_1、d_2
 # sales_train_evaluation.csv - Available once month before competition deadline. Will include sales [d_1 - d_1941]
 #   - 每個商品在每間店的銷售數量
 
