@@ -2,7 +2,7 @@
 if(grepl("Jace", getwd())){
     setwd("D:/Jace/Project/98.Learning/Kaggle_azazon_m5/kernel/RVersion")
 }else{
-    cd("C:\\Users\\CCYoTzom\\Desktop\\kaggle_azazon_m5\\kernel")
+    setwd("C:/Users/CCYoTzom/Desktop/Work/kaggle_azazon_m5/kernel/RVersion")
 }
 
 #library
@@ -58,8 +58,15 @@ cat("rows length: ", nrow(sales_train_validation), ", columns length: ", ncol(sa
 
 ###Todo: Data preproccesing
 
-#combine data
-full_df <- merge(x = , y = df2, by = "CustomerId", all = TRUE)
+#trans sales
+days_colNames <- names(sales_train_validation)[grepl("d_[0-9]*", names(sales_train_validation))]
+sales <- data.frame()
+for (colName in days_colNames) {
+  sales <- rbind(sales, cbind(sales_train_validation[, colName], colName))
+}
+
+#combine data unused
+#full_df <- merge(x = , y = df2, by = "CustomerId", all = TRUE)
 
 ###Todo: EDA
 ###Todo: Feature engineering
